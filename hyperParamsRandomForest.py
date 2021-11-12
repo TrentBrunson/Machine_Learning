@@ -45,7 +45,9 @@ for n in n_estimators:
 # %%
 print(
     f"\nBest Score: {bestOverallScore}\n\n"
-    f"Best Estimator: {bestNEstimator}\n"
-    f"Best Depth: {bestMaxDepth}\t"
+    f"Best Estimator: {bestParameter['bestNEstimator']}\n"
+    f"Best Depth: {bestParameter['bestMaxDepth']}\n"
 )
+# %%
+print(bestParameter)
 # %%
