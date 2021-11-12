@@ -49,3 +49,5 @@ print(paramSearchGrid.best_params_)
 predictedLabels = paramSearchGrid.predict(XTest)
 #%%
 print(classification_report(yTest,predictedLabels))
+
+# %%
