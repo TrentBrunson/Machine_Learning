@@ -1,20 +1,21 @@
 #%%
 from sklearn.datasets import fetch_lfw_people
 from PIL import Image
-from matplotlib import pyplot
+from matplotlib import pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import make_pipeline
 # %%
-faceDataSet = fetch_lfw_people(min_faces_per_person=50)
+faceDataSet = fetch_lfw_people(min_faces_per_person=25)
 
 # %%
 print(faceDataSet.DESCR)
 #%%
 faceDataSet
 # %%
-fig, axis = plt.subplots(6,6)
+fig, axis = plt.subplots(6,7)
 for i,iAxis in enumerate(axis.flat):
     iAxis.imshow(faceDataSet.images[i])
     iAxis.set(xlabel=faceDataSet.target_names[i])
